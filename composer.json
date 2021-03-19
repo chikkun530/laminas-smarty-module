@@ -1,5 +1,5 @@
 {
-    "name":        "divix1988/laminas-smarty-module",
+    "name":        "chikkun530/laminas-smarty-module",
     "description": "Laminas Module for integrating Smarty 3 as View Manager",
     "type":        "library",
     "license":     "MIT",
