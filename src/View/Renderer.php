@@ -110,11 +110,14 @@ class Renderer implements RendererInterface
         }
 
         $smarty = $this->getEngine();
-        $smarty->assign($values);
+	    try {
+		    $smarty->assign($values);
+		    $content = $smarty->fetch($file);
+	    } catch (\SmartyException $e) {
+			throw $e;
+	    }
 
-        $content = $smarty->fetch($file);
-
-        return $content;
+	    return $content;
     }
 
     /**
